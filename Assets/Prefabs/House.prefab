@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3558493660359294206}
   - component: {fileID: 3558493660359294207}
+  - component: {fileID: -2274905609994399699}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -82,3 +83,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &-2274905609994399699
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3558493660359294204}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0063079, y: 0.033834845}
+  m_SpriteTilingProperty:
+    border: {x: 0.28, y: 0, z: 0.25, w: 0.26}
+    pivot: {x: 0.5223593, y: 0.3770238}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7342112, y: 1.0328503}
+  m_EdgeRadius: 0
