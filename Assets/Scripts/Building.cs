@@ -10,10 +10,11 @@ public class Building : MonoBehaviour
     const int DAMAGE = 20;
 
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag.Equals("Bolt"));
+        if (col.gameObject.tag == "Bolt")
         {
+            print("a collision has happened");
             Destroy(col.gameObject);
             health = health - DAMAGE;
         }
