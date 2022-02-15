@@ -11,11 +11,11 @@ public class Sword : MonoBehaviour
     {
          if (Input.GetButton("Arrows") && Input.GetAxisRaw("Arrows") < 0)
          {
-             sword.transform.eulerAngles = new Vector3(sword.transform.eulerAngles.x, sword.transform.eulerAngles.y, sword.transform.eulerAngles.z + 1);
+             sword.transform.eulerAngles = new Vector3(sword.transform.eulerAngles.x, sword.transform.eulerAngles.y, sword.transform.eulerAngles.z + 0.5f);
          }
         if (Input.GetButton("Arrows") && Input.GetAxisRaw("Arrows") > 0)
         {
-            sword.transform.eulerAngles = new Vector3(sword.transform.eulerAngles.x, sword.transform.eulerAngles.y, sword.transform.eulerAngles.z - 1);
+            sword.transform.eulerAngles = new Vector3(sword.transform.eulerAngles.x, sword.transform.eulerAngles.y, sword.transform.eulerAngles.z - 0.5f);
         }
 
     }
