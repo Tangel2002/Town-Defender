@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Sword : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Sword : MonoBehaviour
     int poweringUp = 1;
     bool on = false;
     float countdown = 3;
+    int killCount = 0;
 
     // Update is called once per frame
     void Update()
@@ -36,7 +38,10 @@ public class Sword : MonoBehaviour
             }
         }
 
-
+        if(killCount == 50)
+        {
+            SceneManager.LoadScene("Win");
+        }
         
         if (Input.GetButton("Arrows") && Input.GetAxisRaw("Arrows") < 0)
          {
@@ -63,6 +68,10 @@ public class Sword : MonoBehaviour
             if(col.gameObject.tag == "Bolt")
             {
                 poweringUp++;
+            }
+            if(col.gameObject.tag == "Ork")
+            {
+                killCount++;
             }
         }
     }
