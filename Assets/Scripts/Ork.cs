@@ -9,6 +9,7 @@ public class Ork : MonoBehaviour
     public GameObject magik_bolt;
     public Vector3 coords;
     public Vector3 dropoff;
+    bool done = false;
     float cooldown = 5;
     // Update is called once per frame
     void Update()
@@ -19,8 +20,12 @@ public class Ork : MonoBehaviour
         {
             ork.Translate(move);
         }
+        else
+        {
+            done = true;
+        }
 
-        if(ork.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude == 0)
+        if(done)
         {
             cooldown -= 1 * Time.deltaTime;
             if(cooldown <= 0)
