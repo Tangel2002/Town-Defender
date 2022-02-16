@@ -6,8 +6,8 @@ public class Building : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    float health = 100f;
-    const int DAMAGE = 20;
+    float health = 5f;
+    const int DAMAGE = 1;
     public GameObject house;
 
     private void Update()

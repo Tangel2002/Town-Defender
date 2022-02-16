@@ -15,7 +15,7 @@ public class LossDetection : MonoBehaviour
     {
         if(house1 == null && house2 == null && house3 == null)
         {
-
+            SceneManager.LoadScene("Lose");
         }
     }
 }
