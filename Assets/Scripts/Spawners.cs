@@ -30,7 +30,6 @@ public class Spawners : MonoBehaviour
                 }
 
             }
-            print(rand);
             switch(rand){
                 case 1:
                     Instantiate(prefab, spawner1.transform);
