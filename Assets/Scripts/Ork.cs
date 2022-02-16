@@ -8,9 +8,16 @@ public class Ork : MonoBehaviour
     public Transform ork;
     public GameObject magik_bolt;
     public Vector3 coords;
-    public Vector3 dropoff;
+    Vector3 dropoff;
     bool done = false;
     float cooldown = 5;
+
+    private void Start()
+    {
+        coords.x = ork.position.x;
+        dropoff = new Vector3(coords.x, coords.y - 1, coords.z);
+        
+    }
     // Update is called once per frame
     void Update()
     {

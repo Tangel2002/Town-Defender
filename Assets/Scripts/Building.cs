@@ -8,15 +8,23 @@ public class Building : MonoBehaviour
 
     float health = 100f;
     const int DAMAGE = 20;
+    public GameObject house;
 
+    private void Update()
+    {
+        if(health <= 0)
+        {
+            Destroy(house);
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Bolt")
         {
-            print("a collision has happened");
             Destroy(col.gameObject);
             health = health - DAMAGE;
         }
     }
+    
 }
